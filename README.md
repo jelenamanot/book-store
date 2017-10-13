@@ -1,1 +1,1 @@
-# book-store
+# Book Store app
