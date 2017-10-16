@@ -5,7 +5,7 @@ import '../style/Book.css';
 
 class Book extends React.Component {
   render() {
-    const { details } = this.props;
+    const { details, index } = this.props;
     const isAvailable = details.status === 'available';
     const buttonText = isAvailable ? 'Add To Order' : 'Sold Out';
 
@@ -22,7 +22,13 @@ class Book extends React.Component {
           </div>
         </div>
         <p className="price">Price: <span>{formatPrice(details.price)}</span></p>
-        <button disabled={!isAvailable} className="btn btn-sm btn-success">{buttonText}</button>
+        <button 
+          onClick={() => this.props.addToOrder(index)}
+          disabled={!isAvailable} 
+          className="btn btn-sm btn-success"
+        >
+          {buttonText}
+        </button>
       </li>
     );
   }

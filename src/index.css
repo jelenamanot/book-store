@@ -19,3 +19,8 @@ h1 {
 .btn {
   cursor: pointer;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}

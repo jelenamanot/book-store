@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style/App.css';
 
 import Order from './Order';
 import Inventory from './Inventory';
@@ -32,6 +31,13 @@ class App extends React.Component {
     })
   }
 
+  //passed to <Book />
+  addToOrder = (key) => {
+    const order = {...this.state.order};
+    order[key] = order[key] + 1 || 1;
+    this.setState({order});
+  }
+
   render() {
     return (
       <div className="App container">
@@ -43,12 +49,18 @@ class App extends React.Component {
             {
               Object
                 .keys(this.state.books)
-                .map(key => <Book key={key} details={this.state.books[key]} />)
+                .map(key => 
+                  <Book 
+                    key={key}
+                    index={key}
+                    addToOrder={this.addToOrder} 
+                    details={this.state.books[key]} 
+                  />)
             }
             </ul>
           </div>
           <div className="col-md-3">
-            <Order />
+            <Order books={this.state.books} order={this.state.order} />
           </div>
           <div className="col-md-5">
             <Inventory addBook={this.addBook} loadSamples={this.loadSamples} />
