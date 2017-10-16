@@ -9,7 +9,7 @@ module.exports = {
   },
 
   book2: {
-    name: 'JavaScript: The Good Parts',
+    name: 'JavaScript The Good Parts',
     image: 'https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg',
     desc: 'This authoritative book scrapes away these bad features to reveal a subset of JavaScript that is more reliable, readable, and maintainable .',
     price: 1950,
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   book3: {
-    name: 'JavaScript: The Definitive Guide',
+    name: 'JavaScript The Definitive Guide',
     image: 'https://images-na.ssl-images-amazon.com/images/I/51WD-F3GobL._SX379_BO1,204,203,200_.jpg',
     desc: 'Since 1996, JavaScript: The Definitive Guide has been the bible for JavaScript programmers.',
     price: 3270,
