@@ -44,7 +44,7 @@ class App extends React.Component {
 
         <div className="row">
           <div className="col-md-4">
-            <h1>Books</h1>
+            <h2>Books</h2>
             <ul className="all-books-ul">
             {
               Object
@@ -59,10 +59,10 @@ class App extends React.Component {
             }
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <Order books={this.state.books} order={this.state.order} />
           </div>
-          <div className="col-md-5">
+          <div className="col-md-4">
             <Inventory addBook={this.addBook} loadSamples={this.loadSamples} />
           </div>
         </div>

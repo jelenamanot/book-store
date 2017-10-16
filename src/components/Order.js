@@ -37,7 +37,7 @@ class Order extends React.Component {
 
     return (
       <div className="Order container">
-        <h1>Your Order</h1>
+        <h2>Your Order</h2>
         <ul className="all-orders-ul">
           {orderIds.map(this.renderOrder)}
           <li>Total: {formatPrice(total)}</li>

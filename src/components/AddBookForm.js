@@ -25,9 +25,11 @@ class AddBookForm extends React.Component {
           onSubmit={(e) => this.createBook(e)}
         >
           <div className="row">
-          <input ref={(input) => this.name = input} type="text" placeholder="Book Name" className=" col-md-4 form-control"/>
-          <input ref={(input) => this.price = input} type="text" placeholder="Book Price"  className=" col-md-4 form-control"/>
-          <select ref={(input) => this.status = input} className="col-md-4">
+          <input ref={(input) => this.name = input} type="text" placeholder="Book Name" className=" col-md-12 form-control"/>
+          </div>
+          <div className="row">
+          <input ref={(input) => this.price = input} type="text" placeholder="Book Price"  className=" col-md-6 form-control"/>
+          <select ref={(input) => this.status = input} className="col-md-6">
             <option value="available">available!</option>
             <option value="unavailable">not available!</option>
           </select>
