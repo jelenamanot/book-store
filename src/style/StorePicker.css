@@ -1,0 +1,19 @@
+.StorePicker {
+  margin-top: 5%;
+  border-radius: 15px;
+  padding: 4% 2%;
+  background-color: #FFD238;
+}
+
+.StorePicker input {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.StorePicker .col-md-4 {
+  border-right: 1px solid #3B3B3B;
+}
+
+.StorePicker button {
+  cursor: pointer;
+}
