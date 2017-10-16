@@ -10,9 +10,22 @@
 
 .single-book-li p {
   font-size: 15px;
+  margin-bottom: 0.5rem;
 }
 
 .single-book-li button {
   margin: 2% 0;
   width: 100%;
+}
+
+.single-book-li .price {
+  margin-top: 0.5rem;
+}
+.single-book-li .price span {
+  font-weight: 500;
+}
+
+button[disabled]:hover {
+  color: red;
+  cursor: not-allowed;
 }

@@ -6,19 +6,23 @@ import '../style/Book.css';
 class Book extends React.Component {
   render() {
     const { details } = this.props;
+    const isAvailable = details.status === 'available';
+    const buttonText = isAvailable ? 'Add To Order' : 'Sold Out';
+
     return(
       <li className="single-book-li">
         <h5>{details.name}</h5>
-        <p className="price">{formatPrice(details.price)}</p>
+        <p className="font-italic">by {details.author}</p>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-lg-4 col-md-12">
             <img src={details.image} alt={details.name} />
           </div>
-          <div className="col-md-8">
+          <div className="col-lg-8 col-md-12">
             <p>{details.desc}</p>
           </div>
         </div>
-        <button className="btn btn-sm btn-success">Add To Order</button>
+        <p className="price">Price: <span>{formatPrice(details.price)}</span></p>
+        <button disabled={!isAvailable} className="btn btn-sm btn-success">{buttonText}</button>
       </li>
     );
   }
