@@ -5,6 +5,7 @@ import Inventory from './Inventory';
 import Book from './Book';
 
 import sampleBooks from '../sample-books';
+import base from '../base';
 
 class App extends React.Component {
 
@@ -14,6 +15,19 @@ class App extends React.Component {
       books: {},
       order: {}
     };
+  }
+
+  componentWillMount() {
+    // console.log(this.props.match.params.storeId)
+    this.ref = base.syncState(`${this.props.match.params.storeId}/books`,
+    {
+      context: this,
+      state: 'books'
+    });
+  }
+
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
   }
 
   //passed to <Inventory />
