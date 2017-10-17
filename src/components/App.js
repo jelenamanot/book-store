@@ -24,10 +24,28 @@ class App extends React.Component {
       context: this,
       state: 'books'
     });
+
+    //check if there are orders in localStorage
+    const localStorageRef = localStorage.getItem(`order-${this.props.match.params.storeId}`);
+    
+    if(localStorageRef) {
+      //update our <App> order state
+      this.setState({
+        order: JSON.parse(localStorageRef)
+      });
+    }
   }
 
   componentWillUnmount() {
     base.removeBinding(this.ref);
+  }
+
+  // localStorage order set up
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem(
+      `order-${this.props.match.params.storeId}`,
+      JSON.stringify(nextState.order)
+    );
   }
 
   //passed to <Inventory />
@@ -74,7 +92,11 @@ class App extends React.Component {
             </ul>
           </div>
           <div className="col-md-4">
-            <Order books={this.state.books} order={this.state.order} />
+            <Order 
+              books={this.state.books} 
+              order={this.state.order}
+              params={this.props.match.params}
+            />
           </div>
           <div className="col-md-4">
             <Inventory addBook={this.addBook} loadSamples={this.loadSamples} />
