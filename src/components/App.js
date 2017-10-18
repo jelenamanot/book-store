@@ -78,6 +78,13 @@ class App extends React.Component {
     this.setState({order});
   }
 
+  //passed to <Inventory />
+  removeFromOrder = (key) => {
+    const order = {...this.state.order};
+    delete order[key];
+    this.setState({ order });
+  }
+
   render() {
     return (
       <div className="App container">
@@ -104,6 +111,7 @@ class App extends React.Component {
               books={this.state.books} 
               order={this.state.order}
               params={this.props.match.params}
+              removeFromOrder={this.removeFromOrder}
             />
           </div>
           <div className="col-md-4">

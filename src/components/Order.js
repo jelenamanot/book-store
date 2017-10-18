@@ -9,15 +9,18 @@ class Order extends React.Component {
     const book = this.props.books[key];
     const count = this.props.order[key];
 
+    const removeButton = <button onClick={() => this.props.removeFromOrder(key)} className="remove-order-btn">&times;</button>
+
     if(!book || book.status === 'unavailable') {
-      return <li key={key}>Sorry, { book ? book.name : 'book' } is not available</li>
+      return <li key={key}>Sorry, { book ? book.name : 'book' } is not available {removeButton}</li>
     }
 
     return (
       <li key={key}>
-        <h6>{book.name}</h6>
+        <h6>{book.name} {removeButton}</h6>
         <p>Quantity: {count}</p>
         <p>Price: {formatPrice(count * book.price)}</p>
+        
       </li>
     );
   }

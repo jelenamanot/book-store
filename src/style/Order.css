@@ -7,3 +7,12 @@
   margin-bottom: 0.2rem;
   font-size: 15px;
 }
+
+.remove-order-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  font-size: 17px;
+  margin-left: 10px;
+  float: right;
+}
