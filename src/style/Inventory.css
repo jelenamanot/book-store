@@ -1,0 +1,32 @@
+.render-inventory{
+  margin-bottom: 15%;
+}
+
+.single-book-inventory {
+  padding: 1% 0;
+  margin-bottom: 3%;
+  border-bottom: 1px solid #3B3B3B;
+}
+
+.single-book-inventory p{
+  margin-bottom: 0.2rem;
+}
+
+.single-book-inventory button {
+  border-radius: 50%;
+  line-height: 15px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.single-book-inventory p:first-child{
+  font-weight: 500;
+}
+
+.single-book-inventory p:last-child{
+  font-size: 13px;
+}
+
+.btn-load-wrap {
+  margin: 0 auto;
+}

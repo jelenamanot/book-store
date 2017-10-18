@@ -1,0 +1,31 @@
+.single-book-li {
+  margin: 2% 0;
+  padding: 1%;
+  border-bottom: 1px solid grey;
+}
+
+.single-book-li img {
+  width: 100px;
+}
+
+.single-book-li p {
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.single-book-li button {
+  margin: 2% 0;
+  width: 100%;
+}
+
+.single-book-li .price {
+  margin-top: 0.5rem;
+}
+.single-book-li .price span {
+  font-weight: 500;
+}
+
+button[disabled]:hover {
+  color: red;
+  cursor: not-allowed;
+}

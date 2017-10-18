@@ -1,0 +1,18 @@
+.all-orders-ul li{
+  margin: 4% 0;
+  padding: 1%;
+  border-bottom: 1px solid #3B3B3B;
+}
+.all-orders-ul li p {
+  margin-bottom: 0.2rem;
+  font-size: 15px;
+}
+
+.remove-order-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  font-size: 17px;
+  margin-left: 10px;
+  float: right;
+}
