@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { formatPrice } from '../helpers';
 
 import '../style/Book.css';
@@ -32,6 +34,12 @@ class Book extends React.Component {
       </li>
     );
   }
+}
+
+Book.propTypes = {
+  details: PropTypes.object,
+  index: PropTypes.string,
+  addToOrder: PropTypes.func
 }
 
 export default Book;

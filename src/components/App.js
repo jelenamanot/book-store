@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Order from './Order';
 import Inventory from './Inventory';
@@ -88,7 +89,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App container">
-        <Header />
+        <Header heading={"Book Store"} />
         <div className="row">
           <div className="col-md-4">
             <h2>Books</h2>
@@ -127,6 +128,10 @@ class App extends React.Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  params: PropTypes.object
 }
 
 export default App;

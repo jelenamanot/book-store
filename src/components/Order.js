@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import '../style/Order.css';
 
 import { formatPrice } from '../helpers';
@@ -48,6 +50,12 @@ class Order extends React.Component {
       </div>
     );
   }
+}
+
+Order.propTypes = {
+  books: PropTypes.object,
+  order: PropTypes.object,
+  removeFromOrder: PropTypes.func
 }
 
 export default Order;

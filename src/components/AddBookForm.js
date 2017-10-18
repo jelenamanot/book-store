@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../style/AddBookForm.css';
 
 class AddBookForm extends React.Component {
@@ -34,7 +35,7 @@ class AddBookForm extends React.Component {
               <option value="unavailable">not available!</option>
             </select>
           </div>
-          <div  className="row">
+          <div className="row">
             <textarea ref={(input) => this.desc = input} type="text" placeholder="Book Desc" className="form-control"></textarea>
           </div>
           <div className="row">
@@ -48,6 +49,10 @@ class AddBookForm extends React.Component {
       </div>
     );
   }
+}
+
+AddBookForm.propTypes = {
+  addBook: PropTypes.func
 }
 
 export default AddBookForm;

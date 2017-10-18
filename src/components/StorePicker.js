@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { getFunName } from '../helpers';
 
 import '../style/StorePicker.css';

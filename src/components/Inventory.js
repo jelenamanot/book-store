@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import '../style/Inventory.css';
 
 import AddBookForm from './AddBookForm';
@@ -36,6 +38,13 @@ class Inventory extends React.Component {
       </div>
     );
   }
+}
+
+Inventory.propTypes = {
+  books: PropTypes.object,
+  addBook: PropTypes.func,
+  removeBook: PropTypes.func,
+  loadSamples: PropTypes.func 
 }
 
 export default Inventory;
