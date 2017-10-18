@@ -3,6 +3,7 @@ import React from 'react';
 import Order from './Order';
 import Inventory from './Inventory';
 import Book from './Book';
+import Header from './Header';
 
 import sampleBooks from '../sample-books';
 import base from '../base';
@@ -63,6 +64,13 @@ class App extends React.Component {
     })
   }
 
+  //passed to <Inventory />
+  removeBook = (key) => {
+    const books = {...this.state.books};
+    books[key] = null;
+    this.setState({ books });
+  }
+
   //passed to <Book />
   addToOrder = (key) => {
     const order = {...this.state.order};
@@ -73,7 +81,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App container">
-
+        <Header />
         <div className="row">
           <div className="col-md-4">
             <h2>Books</h2>
@@ -99,10 +107,15 @@ class App extends React.Component {
             />
           </div>
           <div className="col-md-4">
-            <Inventory addBook={this.addBook} loadSamples={this.loadSamples} />
+            <Inventory 
+              addBook={this.addBook} 
+              loadSamples={this.loadSamples} 
+              books={this.state.books}
+              removeBook={this.removeBook}
+            />
           </div>
         </div>
-
+        
       </div>
     );
   }

@@ -1,9 +1,11 @@
 .AddBookForm {
   margin: 2% 0;
 }
-.AddBookForm .form-control {
+.AddBookForm .form-control, .AddBookForm select {
   font-size: 14px;
 }
 .AddBookForm .btn {
+  margin-top: 1%;
+  font-size: 15px;
   padding: 0.2rem;
 }

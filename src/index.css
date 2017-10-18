@@ -12,6 +12,10 @@ body {
   margin-top: 2%;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
 h2 {
   font-family: 'Lora', serif;
   text-align: center;
